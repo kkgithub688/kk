@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>诏安高考研究所</title>
+</head>
+<body onload='test()'>
+ 
+<h1 style="text-align: center;">诏安高考研究所</h1>
+<p style="text-align: center;">建站时间：2023年2月25日</p>
+<p style="text-align: center;"><a href="http://kkgithub688.github.io/kk/final.html">首页</a> 所况简介 机构设置 研究成果 <a href="http://kkgithub688.github.io/kk/rcdw.html">人才队伍</a> 研究生教育 党群园地 科学传播 学术期刊 信息公开</p>
+<div id="bigdiv"><div class="nrt">
+<div align="center" id="wrap">
+<div class="end_wrap" style="width:600px;">
+<form method="POST" action="">
+   <span>开考时间：</span><input id="edtime" name="edtime" type="datetime" value="2023-06-07 08:00:00" style="padding:5px;"><input class="submit" type="submit" value="开始计时" onclick="test()">
+   </form>
+   </div>
+   <div style="margin:40px 0px 30px 0px;"><hr color="#0EA9B1" width="600" size="1"></div>
+   
+   <div class="time-item">
+      <div class="t_info">距离高考还有：</div>
+   
+      <strong id="d">0天</strong>
+      <strong id="h">0时</strong>
+      <strong id="i">0分</strong>
+      <strong id="s">0秒</strong>
+   </div>
+   <div style="border:1px solid #dedede;width:100%;background-color:#F5F7FA;margin-top:20px;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5101993353395713"
+           data-ad-slot="6226720209"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+<p>你还有什么理由不努力?!</p>
+ 
+</body>
+<script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+   Date.prototype.Format = function (fmt) { // author: meizz
+     var o = {
+       "M+": this.getMonth() + 1, // 月份
+       "d+": this.getDate(), // 日
+       "h+": this.getHours(), // 小时
+       "m+": this.getMinutes(), // 分
+       "s+": this.getSeconds(), // 秒
+       "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+       "S": this.getMilliseconds() // 毫秒
+     };
+     if (/(y+)/.test(fmt))
+       fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+     for (var k in o)
+       if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+         return fmt;
+   }
+   
+      function test(){
+                   var nowTime=new Date().Format("yyyy/MM/dd hh:mm:ss");
+    
+   
+         var endTime = '2023-06-07 08:00:00'.replace(/-/g, '/');;
+   
+         var t = Date.parse(endTime) - Date.parse(nowTime);
+         var d = Math.floor(t/1000/60/60/24);
+         var h = Math.floor(t/1000/60/60%24);
+         var i = Math.floor(t/1000/60%60);
+         var s = Math.floor(t/1000%60);
+         document.getElementById('d').innerHTML = d+"天";
+         document.getElementById('h').innerHTML = h+"时";
+         document.getElementById('i').innerHTML = i+"分";
+         document.getElementById('s').innerHTML = s+"秒";
+         if(t<=0){
+            alert('设定时间已过，请重新输入');
+             return false;
+         }
+         setTimeout(test, 1000);
+      }
+   function addBookMark(){
+      var t="倒计时";
+      var url="http://www.daojishiqi.com/riqidaojishi.asp";
+      try{
+         window.external.addFavorite(url,t);
+      }catch (e){
+         try{
+            window.sidebar.addPanel(t, url, "");
+         }catch (e){
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+         }
+      }
+   }
+   </script>
+</html>
